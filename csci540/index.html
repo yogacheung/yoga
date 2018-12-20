@@ -1,0 +1,408 @@
+<!-- Developed by Yoga Cheung -->
+<!-- For Teching CSCI 540     -->
+<!-- 1-Bus                    -->
+<!DOCTYPE html>
+<html>
+<body>
+
+<svg height="1000" width="1000">
+  <!-- Left -->
+
+  <!-- R0 -->
+  <polyline onClick="RegIn(0)" points="10,140 50,140"
+  style="fill:white;stroke:gray;stroke-width:7" />
+
+  <polyline onClick="RegOut(0)" points="165,100 165,140"
+  style="fill:white;stroke:gray;stroke-width:7" />
+
+  <polyline id="r0bin" points="400,40 30,40 30,90 50,90"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <polyline points="50,80 50,150 110,150 110,80 50,80"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <polyline id="r0b" points="110,90 150,90"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <polyline id="r0bout" points="180,90 400,90"
+  style="fill:white;stroke:black;stroke-width:4" />  
+
+  <polyline id="r0bff" points="150,70 150,110 180,90 150,70"
+  style="fill:white;stroke:black;stroke-width:4" />
+ 
+  <!-- R1 -->
+  <polyline onClick="RegIn(1)" points="10,300 50,300"
+  style="fill:white;stroke:gray;stroke-width:7" />
+
+  <polyline onClick="RegOut(1)" points="165,260 165,300"
+  style="fill:white;stroke:gray;stroke-width:7" />
+
+  <polyline id="r1bin" points="400,200 30,200 30,250 50,250"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <polyline points="50,240 50,310 110,310 110,240 50,240"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <polyline id="r1b" points="110,250 150,250"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <polyline id="r1bout" points="180,250 400,250"
+  style="fill:white;stroke:black;stroke-width:4" />  
+
+  <polyline id="r1bff" points="150,230 150,270 180,250 150,230"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <!-- R2 -->
+  <polyline onClick="RegIn(2)" points="10,460 50,460"
+  style="fill:white;stroke:gray;stroke-width:7" />
+
+  <polyline onClick="RegOut(2)" points="165,420 165,460"
+  style="fill:white;stroke:gray;stroke-width:7" />
+
+  <polyline id="r2bin" points="400,360 30,360 30,410 50,410"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <polyline points="50,400 50,470 110,470 110,400 50,400"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <polyline id="r2b" points="110,410 150,410"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <polyline id="r2bout" points="180,410 400,410"
+  style="fill:white;stroke:black;stroke-width:4" />  
+
+  <polyline id="r2bff" points="150,390 150,430 180,410 150,390"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <!-- R3 -->
+  <polyline onClick="RegIn(3)" points="10,620 50,620"
+  style="fill:white;stroke:gray;stroke-width:7" />
+
+  <polyline onClick="RegOut(3)" points="165,580 165,620"
+  style="fill:white;stroke:gray;stroke-width:7" />
+
+  <polyline id="r3bin" points="400,520 30,520 30,570 50,570"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <polyline points="50,560 50,630 110,630 110,560 50,560"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <polyline id="r3b" points="110,570 150,570"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <polyline id="r3bout" points="180,570 400,570"
+  style="fill:white;stroke:black;stroke-width:4" />  
+
+  <polyline id="r3bff" points="150,550 150,590 180,570 150,550"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <!-- R4 -->
+  <polyline onClick="RegIn(4)" points="10,780 50,780"
+  style="fill:white;stroke:gray;stroke-width:7" />
+
+  <polyline onClick="RegOut(4)" points="165,740 165,780"
+  style="fill:white;stroke:gray;stroke-width:7" />
+
+  <polyline id="r4bin" points="400,680 30,680 30,730 50,730"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <polyline points="50,720 50,790 110,790 110,720 50,720"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <polyline id="r4b" points="110,730 150,730"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <polyline id="r4bout" points="180,730 400,730"
+  style="fill:white;stroke:black;stroke-width:4" />  
+
+  <polyline id="r4bff" points="150,710 150,750 180,730 150,710"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <!-- Left End -->
+
+  <!-- Centre -->
+  <polyline id="cbus" points="400,0 400,800"
+  style="fill:white;stroke:black;stroke-width:4" />
+  <!-- Centre End -->
+  
+  <!-- Right -->
+  <!-- Incrementer -->
+  <polyline id="incrin" points="400,20 700,20 700,60"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <polyline points="700,60 800,60 800,90 600,90 600,60 700,60"
+  style="fill:white;stroke:black;stroke-width:4" />
+  
+  <!-- W -->
+  <polyline onClick="RegIn(5)" points="650,220 690,220"
+  style="fill:white;stroke:gray;stroke-width:7" />
+
+  <polyline onClick="RegOut(5)" points="535,180 535,220"
+  style="fill:white;stroke:gray;stroke-width:7" />
+
+  <polyline id="wbin" points="700,90 700,170 650,170"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <polyline points="590,160 590,230 650,230 650,160 590,160"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <polyline id="wb" points="550,170 590,170"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <polyline id="wbout" points="520,170 400,170"
+  style="fill:white;stroke:black;stroke-width:4" />  
+
+  <polyline id="wbff" points="550,150 550,190 520,170 550,150"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <!-- Y -->
+  <polyline onClick="RegIn(6)" points="500,370 460,370"
+  style="fill:white;stroke:gray;stroke-width:7" />
+
+  <polyline id="ybin" points="400,320 500,320"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <polyline points="500,310 500,380 560,380 560,310 500,310"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <polyline id="ybout" points="560,320 700,320 700,500"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <!-- Adder -->
+  <polyline id="addin" points="400,450 630,450 630,500"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <polyline points="600,500 800,500 800,530 600,530 600,500"
+  style="fill:white;stroke:black;stroke-width:4" />  
+
+  <!-- Z -->
+  <polyline onClick="RegIn(7)" points="650,660 690,660"
+  style="fill:white;stroke:gray;stroke-width:7" />
+
+  <polyline onClick="RegOut(7)" points="535,620 535,660"
+  style="fill:white;stroke:gray;stroke-width:7" />
+
+  <polyline id="zbin" points="700,530 700,610 650,610"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <polyline points="590,600 590,670 650,670 650,600 590,600"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <polyline id="zb" points="550,610 590,610"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <polyline id="zbout" points="520,610 400,610"
+  style="fill:white;stroke:black;stroke-width:4" />  
+
+  <polyline id="zbff" points="550,590 550,630 520,610 550,590"
+  style="fill:white;stroke:black;stroke-width:4" />
+
+  <!-- Right End -->
+
+</svg>
+
+<!-- Left -->
+
+<!-- R0 -->
+<div style="position: absolute;top: 160px;left: 20px;">R[0] In</div>
+<div style="position: absolute;top: 120px;left: 180px;">R[0] Out</div>
+<input id="r0v" type="number" name="r0v" value=0 style="position: absolute;top: 105px;left: 62px; width: 48px;height: 30px;font-size:24px;">
+
+<!-- R1 -->
+<div style="position: absolute;top: 320px;left: 20px;">R[1] In</div>
+<div style="position: absolute;top: 280px;left: 180px;">R[1] Out</div>
+<input id="r1v" type="number" name="r1v" value=0 style="position: absolute;top: 265px;left: 62px; width: 48px;height: 30px;font-size:24px;">
+
+<!-- R2 -->
+<div style="position: absolute;top: 480px;left: 20px;">R[2] In</div>
+<div style="position: absolute;top: 440px;left: 180px;">R[2] Out</div>
+<input id="r2v" type="number" name="r2v" value=0 style="position: absolute;top: 425px;left: 62px; width: 48px;height: 30px;font-size:24px;">
+
+<!-- R3 -->
+<div style="position: absolute;top: 640px;left: 20px;">R[3] In</div>
+<div style="position: absolute;top: 600px;left: 180px;">R[3] Out</div>
+<input id="r3v" type="number" name="r3v" value=0 style="position: absolute;top: 585px;left: 62px; width: 48px;height: 30px;font-size:24px;">
+
+<!-- R4 -->
+<div style="position: absolute;top: 800px;left: 20px;">R[4] In</div>
+<div style="position: absolute;top: 760px;left: 180px;">R[4] Out</div>
+<input id="r4v" type="number" name="r4v" value=0 style="position: absolute;top: 745px;left: 62px; width: 48px;height: 30px;font-size:24px;">
+<!-- Left End -->
+
+<!-- Right -->
+<!-- Incrementer -->
+<div style="position: absolute;top: 75px;left: 670px;">Incrementer</div>
+
+<!-- Adder -->
+<div style="position: absolute;top: 515px;left: 685px;">Adder</div>
+
+<!-- W -->
+<div style="position: absolute;top: 234px;left: 680px;">W In</div>
+<div style="position: absolute;top: 200px;left: 490px;">W Out</div>
+<input id="wv" type="number" name="wv" value=0 style="position: absolute;top: 185px;left: 602px; width: 48px;height: 30px;font-size:24px;">
+
+<!-- Y -->
+<div style="position: absolute;top: 390px;left: 470px;">Y In</div>
+<input id="yv" type="number" name="yv" value=0 style="position: absolute;top: 335px;left: 512px; width: 48px;height: 30px;font-size:24px;">
+
+<!-- Z -->
+<div style="position: absolute;top: 680px;left: 680px;">Z In</div>
+<div style="position: absolute;top: 640px;left: 490px;">Z Out</div>
+<input id="zv" type="number" name="zv" value=0 style="position: absolute;top: 625px;left: 602px; width: 48px;height: 30px;font-size:24px;">
+<!-- Right End -->
+
+<script type="text/javascript">  
+  var pr = -1;
+  var cr = -2;
+  var busvalue = 0;
+  var color = "black";
+  
+  function RegIn(signal){        
+    //alert(signal);    
+    
+    if(pr > -1){
+    	switch(pr){
+	      case 0: color = "red"; break;
+	      case 1: color = "brown"; break;
+	      case 2: color = "blue"; break;
+	      case 3: color = "green"; break;
+	      case 4: color = "purple"; break;
+	      case 5: color = "cyan"; break;
+	      case 7: color = "orange";
+	    }      
+
+	    // alert(busvalue); 
+
+    	switch(signal){
+	      case 0: 	      	
+      		document.getElementById("r0b").style.stroke = color;      		
+      		document.getElementById("r0v").value = busvalue;
+      		break;
+	      case 1: 	      	
+      		document.getElementById("r1b").style.stroke = color;      		
+      		document.getElementById("r1v").value = ""+busvalue;
+      		break;
+	      case 2: 	      	
+      		document.getElementById("r2b").style.stroke = color;      		
+      		document.getElementById("r2v").value = busvalue;
+      		break;
+	      case 3:	        
+      		document.getElementById("r3b").style.stroke = color;      		
+      		document.getElementById("r3v").value = busvalue;
+      		break;
+	      case 4:	      	
+      		document.getElementById("r4b").style.stroke = color;      		
+      		document.getElementById("r4v").value = busvalue;
+      		break;
+      	  case 5:	      	
+      		document.getElementById("wb").style.stroke = color;
+      		busvalue++;      		
+      		document.getElementById("wv").value = busvalue;
+      		break;
+  		  case 6:	      	
+      		document.getElementById("ybout").style.stroke = color;
+      		document.getElementById("zbin").style.stroke = color;      		
+      		document.getElementById("yv").value = busvalue;
+      		break;
+      	  case 7:	      	
+      		document.getElementById("zb").style.stroke = color;         		
+      		busvalue += parseInt(document.getElementById("yv").value); 
+      		document.getElementById("zv").value = busvalue;
+	    }
+      pr = -1;
+      color = "black";
+		document.getElementById("r0bin").style.stroke = color;
+		document.getElementById("r0bout").style.stroke = color;
+		document.getElementById("r1bout").style.stroke = color;
+		document.getElementById("r1bin").style.stroke = color;
+		document.getElementById("r2bout").style.stroke = color;
+		document.getElementById("r2bin").style.stroke = color;
+		document.getElementById("r3bout").style.stroke = color;
+		document.getElementById("r3bin").style.stroke = color;
+		document.getElementById("r4bout").style.stroke = color;
+		document.getElementById("r4bin").style.stroke = color;
+		document.getElementById("wbout").style.stroke = color;
+		document.getElementById("wbin").style.stroke = color;
+		document.getElementById("incrin").style.stroke = color;
+		document.getElementById("ybin").style.stroke = color;
+		document.getElementById("addin").style.stroke = color;
+		document.getElementById("zbout").style.stroke = color;
+		document.getElementById("cbus").style.stroke = color;          	      
+    }
+  }
+
+  function RegOut(signal){  
+  	cr = signal;	  	
+    switch(signal){
+      case 0:
+        color = "red"; 
+        document.getElementById("r0bff").style.stroke = color;
+        busvalue = parseInt(document.getElementById("r0v").value); 
+        break;          
+      case 1: 
+        color = "brown";
+        document.getElementById("r1bff").style.stroke = color;
+        busvalue = parseInt(document.getElementById("r1v").value); 
+        break;
+      case 2: 
+        color = "blue"; 
+        document.getElementById("r2bff").style.stroke = color;
+        busvalue = parseInt(document.getElementById("r2v").value); 
+        break;
+      case 3: 
+        color = "green"; 
+        document.getElementById("r3bff").style.stroke = color;
+        busvalue = parseInt(document.getElementById("r3v").value); 
+        break;
+      case 4:
+        color = "purple";
+        document.getElementById("r4bff").style.stroke = color;
+        //alert(document.getElementById("r4v").value);
+        busvalue = parseInt(document.getElementById("r4v").value); 
+        //alert(busvalue);
+        break;
+      case 5:
+        color = "cyan";
+        document.getElementById("wbff").style.stroke = color;
+        busvalue = parseInt(document.getElementById("wv").value);         
+        break;      
+      case 6:        
+        busvalue = parseInt(document.getElementById("yv").value); 
+        break;      
+      case 7:
+        color = "orange";
+        document.getElementById("zbff").style.stroke = color;
+        busvalue = parseInt(document.getElementById("zv").value); 
+    }
+    //alert(signal);    
+    //alert(busvalue);    
+    
+    if(cr != pr){
+    	pr = signal;    	
+    }else{
+    	pr = -1;
+    	color = "black";
+    }
+
+    document.getElementById("r0bout").style.stroke = color;
+	document.getElementById("r0bin").style.stroke = color;
+	document.getElementById("r1bout").style.stroke = color;
+	document.getElementById("r1bin").style.stroke = color;
+  	document.getElementById("r2bout").style.stroke = color;
+  	document.getElementById("r2bin").style.stroke = color;
+  	document.getElementById("r3bout").style.stroke = color;
+  	document.getElementById("r3bin").style.stroke = color;
+  	document.getElementById("r4bout").style.stroke = color;
+  	document.getElementById("r4bin").style.stroke = color;      	
+  	document.getElementById("wbout").style.stroke = color;
+  	document.getElementById("wbin").style.stroke = color;
+  	document.getElementById("incrin").style.stroke = color;
+  	document.getElementById("ybin").style.stroke = color;
+  	document.getElementById("addin").style.stroke = color;
+  	document.getElementById("zbout").style.stroke = color;
+	document.getElementById("cbus").style.stroke = color; 
+    
+  }
+</script>
+</body>
+</html>
